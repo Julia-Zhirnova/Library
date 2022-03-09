@@ -1,0 +1,5 @@
+C:\Users\ushka\source\repos\CoreLib\CoreLib\bin\Debug\CoreLib.dll
+C:\Users\ushka\source\repos\CoreLib\CoreLib\bin\Debug\CoreLib.pdb
+C:\Users\ushka\source\repos\CoreLib\CoreLib\obj\Debug\CoreLib.csproj.CoreCompileInputs.cache
+C:\Users\ushka\source\repos\CoreLib\CoreLib\obj\Debug\CoreLib.dll
+C:\Users\ushka\source\repos\CoreLib\CoreLib\obj\Debug\CoreLib.pdb

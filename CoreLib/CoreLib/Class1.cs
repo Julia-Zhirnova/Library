@@ -27,5 +27,17 @@ namespace CoreLib
             modres = (int)res;
             return modres;
         }
+
+        // Генерация номера студенческого билета в формате: yyyy.group.initial
+        public static string GetStudNumber(int year, int group, string fio)
+        {
+            string[] s = fio.Replace(".", "").Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string LastName = s[0];
+            string Name = s[1];
+            string FatherName = s[2];
+            Console.WriteLine("{0}.{1}.{2}{3}{4}", year, group, LastName[0], Name[0], FatherName[0]);
+            string res = "The End";
+            return res;
+        }
     }
 }

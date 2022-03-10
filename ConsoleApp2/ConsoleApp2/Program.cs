@@ -12,33 +12,36 @@ namespace ConsoleApp2
         static List<Mark> GetMarks(DateTime now, List<string> students)
         {
             int n = students.Count;
-            for (int i = 0; i < n; i++)
-            {
-                Console.WriteLine("ФИО: {0}", students[i]);
-            }
-                
-
-            for (int i = 0; i < 10; i++)
-            {
-                DateTime currentDate = DateTime.Now;
-                DateTime date = currentDate.AddDays(i);
-                Console.WriteLine("Day {0}: {1}", i+1, date);
-            }
-            Mark test_mark = new Mark();
-            test_mark.date = DateTime.Now;
-            string dateOnlyString = test_mark.date.ToShortDateString();
-            Console.WriteLine("Only data: {0}", dateOnlyString);
-            test_mark.Estimation = "5";
-            //test_mark.Print();
-
-            Mark test_mark2 = new Mark();
-            test_mark2.date = DateTime.Now;
-            test_mark2.Estimation = "3";
-            //test_mark2.Print();
-
             List<Mark> marks = new List<Mark>();
-            marks.Add(test_mark);
-            marks.Add(test_mark2);
+
+            for (int j = 0; j < 10; j++)
+            {
+                
+                DateTime currentDate = DateTime.Now;
+                DateTime date = currentDate.AddDays(j);
+                Console.WriteLine("Day {0}: {1}", j + 1, date);
+
+                for (int i = 0; i < n; i++)
+                {
+                    var random = new Random();
+                    var marking = new List<string>{
+                    "5", "4", "3", "2",
+                    "отсутствует", "прогуливает", "болеет"
+                    };
+                    
+                    int index = random.Next(marking.Count);
+                    Console.WriteLine("ФИО: {0}; Оценка: {1}", students[i], marking[index]);
+
+                    Mark test_mark = new Mark();
+                    test_mark.date = date;
+                    test_mark.Estimation = marking[index];
+                    //test_mark1.Print();
+                    marks.Add(test_mark);
+
+                }
+                
+            }
+
 
             marks.ForEach(p => Console.WriteLine($"Дата выставленной отметки: {p.date}, Оценка: {p.Estimation}"));
 
@@ -47,8 +50,6 @@ namespace ConsoleApp2
 
         static void Main(string[] args)
         {
-            string[] marks = new string[n];
-
             /*Console.WriteLine("Vvedite kolichestvo othenok");
             int n = Convert.ToInt32(Console.ReadLine());
             string[] marks = new string[n];

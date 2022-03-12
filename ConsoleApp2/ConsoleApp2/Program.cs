@@ -8,45 +8,7 @@ namespace ConsoleApp2
 {
     class Program
     {
-        // Генерация оценок, посещаемости на 10 дней вперед, начиная с текущей даты со списком переданных студентов 
-        static List<Mark> GetMarks(DateTime now, List<string> students)
-        {
-            int n = students.Count;
-            List<Mark> marks = new List<Mark>();
-
-            for (int j = 0; j < 10; j++)
-            {
-                
-                DateTime currentDate = DateTime.Now;
-                DateTime date = currentDate.AddDays(j);
-                Console.WriteLine("Day {0}: {1}", j + 1, date);
-
-                for (int i = 0; i < n; i++)
-                {
-                    var random = new Random();
-                    var marking = new List<string>{
-                    "5", "4", "3", "2",
-                    "отсутствует", "прогуливает", "болеет"
-                    };
-                    
-                    int index = random.Next(marking.Count);
-                    Console.WriteLine("ФИО: {0}; Оценка: {1}", students[i], marking[index]);
-
-                    Mark test_mark = new Mark();
-                    test_mark.date = date;
-                    test_mark.Estimation = marking[index];
-                    //test_mark1.Print();
-                    marks.Add(test_mark);
-
-                }
-                
-            }
-
-
-            marks.ForEach(p => Console.WriteLine($"Дата выставленной отметки: {p.date}, Оценка: {p.Estimation}"));
-
-            return marks;
-        }
+        
 
         static void Main(string[] args)
         {
@@ -102,7 +64,8 @@ namespace ConsoleApp2
 
             DateTime now = DateTime.Now;
             marks_test = GetMarks(now, students);
-
+            int CountTruancy = GetCountTruancy(marks_test);
+            int CountDicease = GetCountDicease(marks_test);
             Console.ReadKey();
         }
     

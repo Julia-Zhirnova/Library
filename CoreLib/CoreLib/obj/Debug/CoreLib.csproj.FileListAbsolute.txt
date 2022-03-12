@@ -8,3 +8,9 @@ C:\Users\303-0\source\repos\Жирнова ЮВ\жирнова\Attestation\Libra
 C:\Users\303-0\source\repos\Жирнова ЮВ\жирнова\Attestation\Library\CoreLib\CoreLib\obj\Debug\CoreLib.csproj.CoreCompileInputs.cache
 C:\Users\303-0\source\repos\Жирнова ЮВ\жирнова\Attestation\Library\CoreLib\CoreLib\obj\Debug\CoreLib.dll
 C:\Users\303-0\source\repos\Жирнова ЮВ\жирнова\Attestation\Library\CoreLib\CoreLib\obj\Debug\CoreLib.pdb
+C:\Users\ushka\OneDrive\Рабочий стол\Новая папка (2)\Library\CoreLib\CoreLib\bin\Debug\CoreLib.dll
+C:\Users\ushka\OneDrive\Рабочий стол\Новая папка (2)\Library\CoreLib\CoreLib\bin\Debug\CoreLib.pdb
+C:\Users\ushka\OneDrive\Рабочий стол\Новая папка (2)\Library\CoreLib\CoreLib\obj\Debug\CoreLib.csproj.AssemblyReference.cache
+C:\Users\ushka\OneDrive\Рабочий стол\Новая папка (2)\Library\CoreLib\CoreLib\obj\Debug\CoreLib.csproj.CoreCompileInputs.cache
+C:\Users\ushka\OneDrive\Рабочий стол\Новая папка (2)\Library\CoreLib\CoreLib\obj\Debug\CoreLib.dll
+C:\Users\ushka\OneDrive\Рабочий стол\Новая папка (2)\Library\CoreLib\CoreLib\obj\Debug\CoreLib.pdb

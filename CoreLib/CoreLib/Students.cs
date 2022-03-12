@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace CoreLib
 {
     // класс студентов для генерации оценок: группа, год поступления, ФИО.
-    class Students
+    public class Students
     {
         public int year;
         public int group;
@@ -19,10 +19,11 @@ namespace ConsoleApp2
     }
     
     // класс оценок
-    class Mark
+    public class Mark
     {
         public DateTime date; // дата выставленной отметки
         public string Estimation; // оценка, отсутствие (по уважительной причине), прогул, болезнь.
+        public string student;
        // public string Estimationt { get; }
      //   public Mark(string estimationt) => Estimationt = estimationt;
         public void Print()

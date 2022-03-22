@@ -4,16 +4,16 @@ using System.Linq;
 
 namespace ConsoleAppTest
 {
-    class Students
+    public class Students
     {
-        int group;
-        int year;
-        string fio;
+        public int group;
+        public int year;
+        public string fio;
     }
 
     public class Mark
     {
-        public string Student;
+        
         public DateTime date;
         public string Estimation;
     }
@@ -41,8 +41,7 @@ namespace ConsoleAppTest
                     Mark mark = new Mark();
                     mark.Estimation = Estimation[index];
                     mark.date = date;
-                    mark.Student = students[i];
-                    //test_mark1.Print();
+                   
                     marks.Add(mark);
 
                 }
@@ -90,10 +89,13 @@ namespace ConsoleAppTest
             int year = rnd.Next(2000, 2004);
             int group = rnd.Next(190, 220);
 
-
+            Students student1 = new Students();
+            student1.fio = "Алибеков Мустафа";
+            Students student2 = new Students();
+            student2.fio = "Михаил Калашников";
             List<string> Students = new List<string>();
-            Students.Add("Алибеков Мустафа");
-            Students.Add("Михаил Калашников");
+            Students.Add(student1.fio);
+            Students.Add(student2.fio);
 
 
             List<Mark> res = GetMarks(now, Students);
